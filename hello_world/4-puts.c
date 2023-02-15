@@ -1,5 +1,11 @@
 #include <stdio.h>
-/*print a string */
+
+/**
+ * main - this program prints a string
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
