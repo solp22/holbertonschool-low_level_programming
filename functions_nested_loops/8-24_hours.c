@@ -19,15 +19,16 @@ void jack_bauer(void)
 	{
 		x = x / 10;
 		y = x % 10;
-		_putchar (x);
-		_putchar (y);
-		_putchar(':');
 		for (a = 0; a <= 59; x++)
 		{
+			_putchar (x + '0');
+			_putchar (y + '0');
+			_putchar(':');
 			a = a / 10;
 			b = a % 10;
-			_putchar (a);
-			_putchar (b);
+			_putchar (a + '0');
+			_putchar (b + '0');
+			_putchar ('\n');
 		}
 	}
 }
