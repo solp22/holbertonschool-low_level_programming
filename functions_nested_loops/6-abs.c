@@ -16,5 +16,7 @@ int _abs(int x)
 		_putchar (x);
 	}
 	else
+	{
 		_putchar (x);
+	}
 }
