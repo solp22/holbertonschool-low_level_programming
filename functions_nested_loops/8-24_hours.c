@@ -12,6 +12,8 @@ void jack_bauer(void)
 {
 	int x;
 	int y;
+	int a;
+	int b;
 
 	for (x = 0; x <= 23; x++)
 	{
@@ -19,13 +21,13 @@ void jack_bauer(void)
 		y = x % 10;
 		_putchar (x);
 		_putchar (y);
-	}
-	_putchar(':');
-	for (x = 0; x <= 59; x++)
-	{
-		x = x / 10;
-		y = x % 10;
-		_putchar (x);
-		_putchar (y);
+		_putchar(':');
+		for (a = 0; a <= 59; x++)
+		{
+			a = a / 10;
+			b = a % 10;
+			_putchar (x);
+			_putchar (y);
+		}
 	}
 }
