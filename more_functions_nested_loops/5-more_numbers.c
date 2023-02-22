@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - check the code.
+ * more_numbers - check the code.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
-void print_alphabet_x10(void)
+void more_numbers(void)
 {
 	int x;
 	int i;
