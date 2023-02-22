@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - check the code.
+ * _isupper- check the code.
  *
  * @c: character
  *
@@ -9,7 +9,7 @@
  * Return: Always 0 (Success)
  */
 
-int _islower(int c)
+int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);
