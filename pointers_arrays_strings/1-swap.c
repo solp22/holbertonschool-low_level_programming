@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * swap - check code
+ * swap_int - check code
  *
  * @a: number
  * @b: other number
