@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int x;
-	unsigned int n = 0;
+	int n = 0;
 	int sign = 1;
 
 	for (x = 0; s[x]; x++)
@@ -28,7 +28,6 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		x++;
 	}
 	return (n * sign);
 }
