@@ -23,13 +23,19 @@ char *_strstr(char *haystack, char *needle)
 			temp = 0;
 		if (i == temp)
 		{
-			if (*haystack == ' ')
-			{
-				haystack++;
-			}
-			return (haystack - temp);
+			haystack -= temp;
+			break;
 		}
 		haystack++;
+	}
+	if (*haystack == ' ' && temp == i)
+	{
+		haystack++;
+		return (haystack);
+	}
+	else if (temp == i)
+	{
+		return (haystack);
 	}
 	return (NULL);
 }
