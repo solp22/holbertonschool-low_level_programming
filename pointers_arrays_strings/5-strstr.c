@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			temp = 0;
 		if (i == temp)
 		{
-			if (*haystack++ == ' ')
+			if (*haystack == ' ')
 			{
 				haystack++;
 			}
