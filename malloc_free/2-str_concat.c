@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
-	int i, x, y, z, sum;
+	int i = 0, x = 0, y, z, sum;
 
 	if (s1 != NULL)
 	{
@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		for (y = 0; s1[y]; y++)
 		{
 			p[y] = s1[y];
-		}	
+		}
 		for (z = 0; s2[z]; z++, y++)
 		{
 			p[y] = s2[z];
