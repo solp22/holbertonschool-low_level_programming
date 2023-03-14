@@ -34,13 +34,19 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (y = 0; s1[y]; y++)
+		if (s1 != NULL)
 		{
-			p[y] = s1[y];
+			for (y = 0; s1[y]; y++)
+			{
+				p[y] = s1[y];
+			}
 		}
-		for (z = 0; s2[z]; z++, y++)
+		if (s2 != NULL)
 		{
-			p[y] = s2[z];
+			for (z = 0; s2[z]; z++, y++)
+			{
+				p[y] = s2[z];
+			}
 		}
 	return (p);
 	}
