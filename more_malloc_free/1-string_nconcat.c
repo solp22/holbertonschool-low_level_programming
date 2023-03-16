@@ -43,8 +43,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			for (z = 0; z < n; z++, y++)
 			{	p[y] = s2[z]; }
-			p[y] = '\0';
 		}
+	p[y] = '\0';
 	return (p);
 	}
 }
