@@ -3,6 +3,7 @@
 #include "dog.h"
 
 /**
+ * print_dog - prints value of elements in struct
  * @d: pointer
  */
 
