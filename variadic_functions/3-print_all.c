@@ -59,13 +59,14 @@ void print_char(va_list args)
 
 /**
  * print_all - prints all
- * @args: argument
+ * @format: list of types of arguments
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i, x;
+	char *sep = "";
 
 	form_t prints[] = {
 		{"c", print_char},
@@ -79,12 +80,14 @@ void print_all(const char * const format, ...)
 
 	while (format != NULL && format[x] != '\0')
 	{
+		i = 0;
 		while (prints[i].f)
 		{
 			if (prints[i].f[0] == format[x])
 			{
+				printf("%s", sep);
+				sep = ", ";
 				(prints[i].func)(args);
-				printf(", ");
 			}
 			i++;
 		}
