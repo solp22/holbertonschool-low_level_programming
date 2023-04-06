@@ -1,34 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-/**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
- */
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-    unsigned int i;
-
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
-}
+#include "main.h"
 
 /**
  * main - check the code
@@ -37,15 +8,17 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *buffer;
+    unsigned int n;
 
-    buffer = create_array(98, 'H');
-    if  (buffer == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    simple_print_buffer(buffer, 98);
-    free(buffer);
+    n = binary_to_uint("1");
+    printf("%u\n", n);
+    n = binary_to_uint("101");
+    printf("%u\n", n);
+    n = binary_to_uint("1e01");
+    printf("%u\n", n);
+    n = binary_to_uint("1100010");
+    printf("%u\n", n);
+    n = binary_to_uint("0000000000000000000110010010");
+    printf("%u\n", n);
     return (0);
 }
