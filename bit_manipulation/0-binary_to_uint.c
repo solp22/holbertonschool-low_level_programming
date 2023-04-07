@@ -18,9 +18,9 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-		/*moves each bit to the left ( x 2)*/
+		/*moves each bit to the left (unit x 2)*/
 		uint = uint << 1;
-		/*then adds current bit to convert to decimal*/
+		/*then adds current bit to convert to decimal (unit + 0 or 1) */
 		uint = uint + b[i] - '0';
 		i++;
 	}
