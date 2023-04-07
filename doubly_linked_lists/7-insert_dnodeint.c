@@ -1,5 +1,22 @@
 #include "lists.h"
 /**
+ * calcsize - calculates size of node
+ * @node: pointer to node
+ * Return: size of node
+ */
+unsigned int calcsize (dlistint_t *node)
+{
+	unsigned int size = 0;
+
+	while (node != NULL)
+	{
+		node = node->next;
+		size++;
+	}
+	return (size);
+}
+
+/**
  * insert_dnodeint_at_index - inserts new node at given position
  * @h: pointer to pointer of first node
  * @idx: index where node should be added
@@ -9,37 +26,35 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new;
-	dlistint_t *current;
-	unsigned int i = 0;
+	unsigned int size = calcsize (*h);
 
-	if (idx < 1)
+	if (size < idx)
+	{
 		return (NULL);
-	current = (*h);
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
+	}
 
 	if (idx == 0)
-	{
-		new->prev = NULL;
-		new->next = (*h);
-		(*h)->prev = new;
-		(*h) = new;
-	}
+		add_dnodeint(h, n);
+	else if (idx == size)
+		add_dnodeint_end(h, n);
 	else
 	{
-		for (i = 0; i < (idx - 1); i++)
-		{
-			current = current->next;
-		}
-		new->next = current->next;
-		current->next = new;
-		if (idx == 1)
-		{
-			(*h) = new;
-			new->n = n;
-		}
+		dlistint_t *temp = *h;
+		dlistint_t *newnode;
+		dlistint_t *temp2;
+
+		newnode = malloc(sizeof(dlistint_t));
+		if (newnode == NULL)
+			return (NULL);
+		newnode->n = n;
+		newnode->next = NULL;
+		while (--idx)
+			temp = temp->next;
+		temp2 = temp->next;
+		newnode->next = temp->next;
+		newnode->prev = temp;
+		temp->next = newnode;
+		temp2->prev = newnode;
 	}
 	return (*h);
 }
