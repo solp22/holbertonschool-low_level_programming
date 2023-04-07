@@ -4,7 +4,7 @@
  * @node: pointer to node
  * Return: size of node
  */
-unsigned int calcsize (dlistint_t *node)
+unsigned int calcsize(dlistint_t *node)
 {
 	unsigned int size = 0;
 
@@ -26,7 +26,7 @@ unsigned int calcsize (dlistint_t *node)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int size = calcsize (*h);
+	unsigned int size = calcsize(*h);
 
 	if (size < idx)
 	{
