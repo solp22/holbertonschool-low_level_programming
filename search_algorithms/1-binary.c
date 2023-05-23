@@ -15,7 +15,7 @@ void print_array(int *array, size_t low, size_t high)
 	{
 		if (i > low)
 			printf(", ");
-		printf("%d", array[i]);
+		printf("%i", array[i]);
 	}
 	printf("\n");
 }
