@@ -25,12 +25,16 @@ void print_array(int *array, size_t low, size_t high)
  * @array: pointer to the first elemento of array to search in
  * @size: number of elements in array
  * @value: value to search for
+ * Return: value or -1 in case of failure
 */
 int binary_search(int *array, size_t size, int value)
 {
 	size_t middle = 0;
 	size_t low;
 	size_t high = size - 1;
+
+	if (!array)
+		return (-1);
 
 	while (low <= high)
 	{
